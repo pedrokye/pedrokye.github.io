@@ -3,57 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PEDROKYE | Design Studio</title>
+    <title>PEDROKYE | Visual Design</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        .card-hover:hover { transform: translateY(-10px); transition: 0.3s; }
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); }
+        .reveal { transition: all 0.8s ease-out; }
+        .reveal:hover { transform: scale(1.02); }
     </style>
 </head>
-<body class="bg-neutral-900 text-white font-sans">
+<body class="bg-[#050505] text-white antialiased">
 
-    <!-- Header -->
-    <nav class="p-8 flex justify-between items-center border-b border-neutral-800">
-        <h1 class="text-2xl font-bold tracking-tighter">PEDROKYE.</h1>
-        <div class="space-x-6 text-sm uppercase">
-            <a href="#motion" class="hover:text-gray-400">Motion</a>
-            <a href="#social" class="hover:text-gray-400">Social Media</a>
-            <a href="#thumbs" class="hover:text-gray-400">Thumbs</a>
+    <!-- Nav Minimalista -->
+    <nav class="fixed w-full z-50 p-8 flex justify-between items-center bg-[#050505]/80 backdrop-blur-md">
+        <span class="text-lg font-semibold tracking-tighter">PEDROKYE</span>
+        <div class="space-x-8 text-xs uppercase tracking-widest text-neutral-400">
+            <a href="#work" class="hover:text-white transition">Portfolio</a>
+            <a href="#" class="hover:text-white transition">Contato</a>
         </div>
     </nav>
 
-    <!-- Seções -->
-    <main class="p-8 md:p-20">
-        
-        <!-- Grid de Projetos -->
-        <section id="portfolio" class="grid grid-cols-1 md:grid-cols-2 gap-8">
+    <!-- Hero Section -->
+    <header class="pt-40 pb-20 px-8 text-center">
+        <h1 class="text-7xl md:text-9xl font-semibold tracking-tighter mb-6">PEDROKYE</h1>
+        <p class="text-xl text-neutral-500 max-w-lg mx-auto leading-relaxed">
+            Estratégia visual e design de alta performance. Elevando marcas através de Motion, Social Media e Thumbnails.
+        </p>
+    </header>
+
+    <!-- Grid de Alta Resolução -->
+    <main id="work" class="max-w-7xl mx-auto px-8 py-20">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
             
-            <!-- Motion -->
-            <div id="motion" class="bg-neutral-800 p-8 card-hover">
-                <h2 class="text-3xl font-bold mb-4">MOTION</h2>
-                <div class="h-64 bg-neutral-700 flex items-center justify-center mb-4">IMAGEM/VIDEO</div>
-                <button class="w-full bg-white text-black py-3 font-bold hover:bg-gray-300">VER PROJETOS</button>
+            <!-- Motion Card -->
+            <div class="reveal glass p-8 h-[500px] flex flex-col justify-end group cursor-pointer">
+                <span class="text-neutral-500 text-sm mb-2">01 — MOTION</span>
+                <h3 class="text-4xl font-light mb-4">Experiência em Movimento</h3>
+                <div class="w-12 h-[2px] bg-white group-hover:w-24 transition-all"></div>
             </div>
 
-            <!-- Social Media -->
-            <div id="social" class="bg-neutral-800 p-8 card-hover">
-                <h2 class="text-3xl font-bold mb-4">SOCIAL MEDIA</h2>
-                <div class="h-64 bg-neutral-700 flex items-center justify-center mb-4">IMAGEM</div>
-                <button class="w-full bg-white text-black py-3 font-bold hover:bg-gray-300">VER PORTFÓLIO</button>
+            <!-- Social Media Card -->
+            <div class="reveal glass p-8 h-[500px] flex flex-col justify-end group cursor-pointer">
+                <span class="text-neutral-500 text-sm mb-2">02 — SOCIAL</span>
+                <h3 class="text-4xl font-light mb-4">Identidade e Alcance</h3>
+                <div class="w-12 h-[2px] bg-white group-hover:w-24 transition-all"></div>
             </div>
 
-            <!-- Thumbmaker -->
-            <div id="thumbs" class="bg-neutral-800 p-8 card-hover md:col-span-2">
-                <h2 class="text-3xl font-bold mb-4">THUMBMAKER</h2>
-                <div class="h-64 bg-neutral-700 flex items-center justify-center mb-4">GALERIA DE THUMBS</div>
-                <button class="w-full bg-white text-black py-3 font-bold hover:bg-gray-300">VER TRABALHOS</button>
+            <!-- Thumbmaker Card (Full width) -->
+            <div class="reveal glass p-8 h-[400px] flex flex-col justify-end group cursor-pointer md:col-span-2">
+                <span class="text-neutral-500 text-sm mb-2">03 — THUMBMAKER</span>
+                <h3 class="text-4xl font-light mb-4">CTR Elevado através de Design</h3>
+                <div class="w-12 h-[2px] bg-white group-hover:w-24 transition-all"></div>
             </div>
 
-        </section>
+        </div>
     </main>
 
-    <!-- Footer -->
-    <footer class="p-20 text-center border-t border-neutral-800">
-        <p class="text-neutral-500">© 2026 PEDROKYE DESIGN STUDIO</p>
+    <footer class="py-20 text-center text-neutral-700 text-xs tracking-widest uppercase">
+        © 2026 Pedrokye Studio. All rights reserved.
     </footer>
 
 </body>
